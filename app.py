@@ -6,19 +6,20 @@ import numpy as np
 # Load Saved Objects
 # -----------------------------
 
-# @st.cache_resource
-# def load_model():
-#     model = joblib.load("deepcsat_model.joblib")
-#     scaler = joblib.load("scaler.joblib")
-#     imputer = joblib.load("imputer.joblib")
-#     feature_columns = joblib.load("feature_columns.joblib")
-#     return model, scaler, imputer, feature_columns
+@st.cache_resource
+def load_model():
+    model = joblib.load("deepcsat_model.joblib")
+    scaler = joblib.load("scaler.joblib")
+    imputer = joblib.load("imputer.joblib")
+    feature_columns = joblib.load("feature_columns.joblib")
+    return model, scaler, imputer, feature_columns
 
-# model, scaler, imputer, feature_columns = load_model()
-model = joblib.load("deepcsat_model.joblib")
-scaler = joblib.load("scaler.joblib")
-imputer = joblib.load("imputer.joblib")
-feature_columns = joblib.load("feature_columns.joblib")
+model, scaler, imputer, feature_columns = load_model()
+
+# model = joblib.load("deepcsat_model.joblib")
+# scaler = joblib.load("scaler.joblib")
+# imputer = joblib.load("imputer.joblib")
+# feature_columns = joblib.load("feature_columns.joblib")
 
 # -----------------------------
 # App Title
